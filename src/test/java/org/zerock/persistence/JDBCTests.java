@@ -22,8 +22,8 @@ public class JDBCTests {
 	
 	@Test
 	public void testConnection() {
-		try (Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:system", 
-				"system","1234")){// 집에서 되는거
+		try (Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", 
+				"system","1234")){// 집에서 되는거 1521:system 회사 1521:xe이건 커밋 안하기
 			log.info(con);
 		} catch (Exception e) {
 			// TODO: handle exception
